@@ -11,8 +11,9 @@ interface col {
   intro: string
 }
 
-getZhihuColumn('vczatan')
-  .then((column: col) => {
-    console.log(`NAME: ${column.name}`);
-    console.log(`INTRO: ${column.intro}`);
-  })
+(async () => {
+  const column = await getZhihuColumn('vczatan');
+  console.log(`NAME: ${column.name}`);
+  console.log(`INTRO: ${column.intro}`);
+})()
+
