@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css" media="screen">
+    <% if (type == 'admin') { %>
+    <% include admin.css %>
+    <% } else { %>
+    <% include main.css %>
+    <% } %>
+  </style>
+</head>
+<body>
+  <% json.arr.forEach(function(item, index) { %>
+    <div>
+      用户名: <%= item.name %>
+      密码: <%= item.age %>
+    </div>
+  <% }) %>
+  <% include a.txt %>
+</body>
+</html>
